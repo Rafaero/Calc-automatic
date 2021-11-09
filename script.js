@@ -23,8 +23,6 @@ function calc(){
     let tenNumber = parseFloat(questionTen)
     let elevenNumber = parseFloat(questionEleven)
 
-
-
     let porcetagem = ((oneNumber + twoNumber + threeNumber + fourNumber + fiveNumber + sixNumber + sevenNumber + eightNumber + nineNumber + tenNumber + elevenNumber) / 34.5) * 100;
     let sum = (oneNumber + twoNumber + threeNumber + fourNumber + fiveNumber + sixNumber + sevenNumber + eightNumber + nineNumber + tenNumber + elevenNumber)
 
@@ -36,6 +34,10 @@ function calc(){
         document.getElementById("show-porcent").innerHTML = ""
     }
 
-    document.getElementById("show-sum").innerHTML = sum.toFixed(2)
-
+    if(sum >= 0 || sum <= 0){
+        document.getElementById("show-sum").innerHTML = sum.toFixed(2)
+    }else{
+        alert("Preencha todos os campos")
+    }
 }
+
