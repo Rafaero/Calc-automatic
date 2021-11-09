@@ -30,8 +30,11 @@ function calc(){
 
     let resultPorcent = (porcetagem.toFixed(2) + " %")
 
-
-    document.getElementById("show-porcent").innerHTML = resultPorcent
+    if(porcetagem >= 0){
+        document.getElementById("show-porcent").innerHTML = resultPorcent
+    }else{
+        document.getElementById("show-porcent").innerHTML = ""
+    }
 
     document.getElementById("show-sum").innerHTML = sum.toFixed(2)
 
